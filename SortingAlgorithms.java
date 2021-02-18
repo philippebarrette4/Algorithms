@@ -1,7 +1,7 @@
 public class SortingAlgorithms {
-    /*
-    Selection sort function
-     */
+
+    //Selection sort algorithm
+    //Parameters: array with undefined size, and an order: ASC or DESC
     public static void selectionSort(int[] arr, String order) {
 
         if(order == "ASC"){
@@ -39,14 +39,12 @@ public class SortingAlgorithms {
         }
     }
 
-    /*
-    Bubble sort algorithm
-     */
+    //Bubble sort algorithm
+    //Parameters: array with undefined size, and an order: ASC or DESC
     public static void bubbleSort(int[] arr, String order) {
 
 
         if(order == "ASC"){
-
             for(int i=0; i < arr.length-1; i++){
                 for(int j=0; j < arr.length-i-1; j++){
                     if(arr[j] > arr[j+1]){
@@ -59,7 +57,6 @@ public class SortingAlgorithms {
 
         }else if(order == "DESC"){
             for(int i=0; i < arr.length-1; i++){
-
                 for(int j=0; j < arr.length-i-1; j++){
                     if(arr[j] < arr[j+1]){
                         int temp = arr[j];
@@ -71,21 +68,23 @@ public class SortingAlgorithms {
         }else{
             System.out.println("Error, order is not valid!");
         }
-
     }
 
 
-
+    //Function that print the array
+    //The parameter is an array of size undefined
     public static void printArray(int[] arr){
         for(int i=0; i<arr.length;++i)
             System.out.print(arr[i]+" ");
     }
 
+    //Main function
     public static void main(String[] args){
 
         //Array
         int[] arr = {4,3,5,8,1,11,10,9,12,2};
 
+        //Selection sort and printing of the sorted array (in both ways)
         System.out.println("====== Selection Sort ======");
         System.out.println("Sort in ascendant order:");
         selectionSort(arr, "ASC");
@@ -94,6 +93,7 @@ public class SortingAlgorithms {
         selectionSort(arr, "DESC");
         printArray(arr);
 
+        //Bubble sort and printing of the sorted array (in both ways)
         System.out.println("\n\n====== Bubble Sort ======");
         System.out.println("Sort in ascendant order:");
         bubbleSort(arr, "ASC");
