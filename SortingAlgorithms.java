@@ -1,3 +1,4 @@
+
 public class SortingAlgorithms {
 
     //Selection sort algorithm
@@ -84,8 +85,12 @@ public class SortingAlgorithms {
         //Array
         int[] arr = {4,3,5,8,1,11,10,9,12,2};
 
+        //Linear Search in the array
+        System.out.println("====== Linear Search ======");
+        SearchingAlgorithms.linearSearch(arr, 10);
+
         //Selection sort and printing of the sorted array (in both ways)
-        System.out.println("====== Selection Sort ======");
+        System.out.println("\n====== Selection Sort ======");
         System.out.println("Sort in ascendant order:");
         selectionSort(arr, "ASC");
         printArray(arr);
@@ -101,7 +106,5 @@ public class SortingAlgorithms {
         System.out.println("\nSort in descendant order:");
         bubbleSort(arr, "DESC");
         printArray(arr);
-
-
     }
 }
